@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    /* background-image: url('images/background.png'); */
+    background-size: cover;
+    background-position: center;
+}
+
+#game-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px); /* 10列を作成し、各セルの幅を40pxに設定 */
+    grid-template-rows: repeat(10, 40px); /* 10行を作成し、各セルの高さを40pxに設定 */
+    grid-gap: 5px; /* セル間の隙間を5pxに設定 */
+    margin: 20px auto; /* ゲームボードを水平方向に中央寄せし、上下に余白を設定 */
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #3dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cell.open {
+    background-color: #bbb;
+}
+
+.cell.flag {
+    background-image: url('images/flag.png');
+    background-size: cover;
+}
+
+.cell.mine {
+    background-image: url('images/mine.png');
+    background-size: cover;
+}
+
+.game-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
